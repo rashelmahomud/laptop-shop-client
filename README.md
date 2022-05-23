@@ -1,9 +1,9 @@
 #Best Laptop Parts
 
-This is my project link [Heroku live site link](https://carphone-warehouse-d843f.web.app).
+This is my project link [Heroku live site link]().
 
 
-best carphone warehouse website. excellent all pisser this website and your needs any phone buy this website and lowers cost only for your.I try to do clear and efficient code.
+best laptop parts website. excellent all pisser this website and your needs any laptop parts buy this website and lowers cost only for your.I try to do clear and efficient code.
 
 * I emplement here firebase
 * I use here mongodb database
