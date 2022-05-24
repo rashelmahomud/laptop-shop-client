@@ -16,7 +16,7 @@ const AddReview = () => {
         })
             .then(res => res.json())
             .then(data => {
-                window.alert('quantity added');
+                window.alert('successfully Review add');
                 window.location.reload();
 
                 // e.target.reset();
