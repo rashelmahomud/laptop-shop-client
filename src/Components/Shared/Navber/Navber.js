@@ -21,11 +21,11 @@ const Navber = () => {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
 
-        <li>{user ? <button onClick={logout} className="btn btn-ghost">SignOut</button> : <Link to="/login">Login</Link>}</li>
+        <li>{user ? <button onClick={logout} className="btn btn-ghost font-bold">SignOut</button> : <Link to="/login">Login</Link>}</li>
     </>
 
     return (
-        <div className="navbar bg-base-100 px-10">
+        <div className="navbar bg-gray-200 px-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -38,7 +38,7 @@ const Navber = () => {
                 </div>
                 <a className="btn btn-ghost normal-case text-xl">LAPTOP PARTS</a>
             </div>
-            <div className="navbar-end hidden lg:flex">
+            <div className="navbar-end hidden lg:flex font-bold">
                 <ul className="menu menu-horizontal p-0">
                     {navbermenu}
                 </ul>

@@ -13,7 +13,7 @@ const Banner = () => {
                         <div className="title">
 
                             <div>
-                                <h1 className="text-white">Welcome to Our Shops</h1>
+                                <h1 className="text-white font-bold">Welcome to Our Shops</h1>
                                 <h1 className="text-white">Hello Dear Customers!</h1>
 
 
