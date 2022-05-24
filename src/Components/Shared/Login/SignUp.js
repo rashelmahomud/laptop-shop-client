@@ -11,7 +11,6 @@ const SignUp = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
-
     const [
         createUserWithEmailAndPassword,
         user,
@@ -27,10 +26,10 @@ const SignUp = () => {
 
     let loginError;
 
-    if (token) {
-        navigate('/home');
+   if(token){
+       navigate('/home')
+   };
 
-    };
     if (gLoading || loading || updating) {
         return <Loading></Loading>
     };
