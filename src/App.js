@@ -47,9 +47,9 @@ function App() {
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
 
-          <Route path='users' element={<RequirAdmin><Users></Users></RequirAdmin>}></Route>
-          <Route path='addproduct' element={<RequirAdmin><AddProduct></AddProduct></RequirAdmin>}></Route>
-          <Route path='manageorder' element={<RequirAdmin><ManageOrders></ManageOrders></RequirAdmin>}></Route>
+          <Route path='users' element={<Users></Users>}></Route>
+          <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='manageorder' element={<ManageOrders></ManageOrders>}></Route>
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>
