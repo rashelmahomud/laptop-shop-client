@@ -7,7 +7,7 @@ import auth from '../../firebase.init';
 
 const Dashboard = () => {
     const [user] = useAuthState(auth);
-    const [admin] = useAdmin();
+    const [admin] = useAdmin(user);
     return (
         <div class="drawer drawer-mobile px-5">
             <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
@@ -30,8 +30,6 @@ const Dashboard = () => {
                         <li><Link to='/dashboard/addproduct'>Add Product</Link></li>
                         <li><Link to='/dashboard/manageorder'>Manage Order</Link></li>
                     </>}
-
-
 
                 </ul>
 
