@@ -21,6 +21,7 @@ import Users from './Components/Dashboard/Users';
 import AddProduct from './Components/Dashboard/AddProduct';
 import ManageOrders from './Components/Dashboard/ManageOrders';
 import RequirAdmin from './Components/Shared/RequirAdmin';
+import Payment from './Components/Dashboard/Payment';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route index element={<MyOrder></MyOrder>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
 
           <Route path='users' element={<RequirAdmin><Users></Users></RequirAdmin>}></Route>
           <Route path='addproduct' element={<RequirAdmin><AddProduct></AddProduct></RequirAdmin>}></Route>
@@ -58,7 +60,7 @@ function App() {
 
 
       </Routes>
-  
+
       <ToastContainer />
 
 
