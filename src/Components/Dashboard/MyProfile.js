@@ -50,7 +50,7 @@ const MyProfile = ({ order }) => {
 
                             </div>
                             {
-                                profiles.map(profile => <div>
+                                profiles.slice(-1).map(profile => <div>
                                     <div>
 
                                         <div class="avatar">
@@ -77,11 +77,13 @@ const MyProfile = ({ order }) => {
             {/* import for code */}
             <div class="hero">
                 <div class="hero-content">
+                  
 
                     <div class="card  shadow-2xl bg-base-100">
                         <div class="card-body">
                             <div class="form-control">
                                 <div className='border lg:m-20 p-5'>
+                                <h3 className='text-3xl font-bold'>You Can Add Your Profile Here!</h3>
                                     <form className='m-5 d-flex mx-auto flex-column w-50' onSubmit={handleSubmit(onSubmit)}>
                                         <input placeholder='Present Educations..' className='mt-3 w-full border p-3' {...register("Name",)} />
                                         <input placeholder='Phone Number' className='mt-3 w-full border p-3' {...register("Phone",)} />
