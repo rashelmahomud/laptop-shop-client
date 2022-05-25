@@ -14,7 +14,7 @@ const MyOrder = () => {
         const proceed = window.confirm('Are You Sure For Delete Order?')
         if (proceed) {
             // console.log("hello",id);
-            fetch(`http://localhost:5000/order/${id}`, {
+            fetch(`https://polar-spire-39773.herokuapp.com/order/${id}`, {
                 method: 'DELETE',
             })
                 .then(res => res.json())
