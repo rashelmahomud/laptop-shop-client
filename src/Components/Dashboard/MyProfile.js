@@ -9,14 +9,14 @@ const MyProfile = ({ order }) => {
     const [profiles, setProfiles] = useState([]);
     const { register, handleSubmit } = useForm();
     useEffect(() => {
-        fetch('http://localhost:5000/profile')
+        fetch('https://polar-spire-39773.herokuapp.com/profile')
             .then(res => res.json())
             .then(data => setProfiles(data))
     }, [])
 
     const onSubmit = data => {
-        console.log("hello", data);
-        const url = `http://localhost:5000/profile`;
+        // console.log("hello", data);
+        const url = `https://polar-spire-39773.herokuapp.com/profile`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -34,8 +34,6 @@ const MyProfile = ({ order }) => {
 
             })
     }
-
-    fetch(`http://localhost:5000/profile`)
 
     return (
         <div>
