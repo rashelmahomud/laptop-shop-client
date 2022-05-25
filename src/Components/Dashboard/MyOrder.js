@@ -30,6 +30,12 @@ const MyOrder = () => {
 
     }
 
+    const handelPayment = (id)=> {
+
+        console.log('payment',id)
+
+    }
+
     useEffect(() => {
         if (user) {
             fetch(`https://polar-spire-39773.herokuapp.com/order?userEmail=${user.email}`, {
@@ -81,7 +87,7 @@ const MyOrder = () => {
                                 <td>{order.cost}</td>
                                 <td>{user.email}</td>
                                 <td>{order.number}</td>
-                                <td><button class="btn btn-xs font-bold bg-green-600">Pay</button></td>
+                                <td><button onClick={() => handelPayment(order._id)} class="btn btn-xs font-bold bg-green-600">Pay</button></td>
                                 <td><button onClick={() => handelDeleteOrder(order._id)} class="btn btn-xs font-bold bg-red-600">Delete</button></td>
                             </tr>)
                         }

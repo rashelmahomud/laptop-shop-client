@@ -5,7 +5,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `https://polar-spire-39773.herokuapp.com/review`;
+        const url = `http://localhost:5000/service`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -33,10 +33,12 @@ const AddProduct = () => {
 
                 <div className='border lg:m-20 p-5'>
                     <form className='m-5 d-flex mx-auto flex-column w-50' onSubmit={handleSubmit(onSubmit)}>
-                        <input placeholder='Enter Your Name' className='mt-3 w-full border p-3' {...register("Name",)} />
-                        <input placeholder='Enter Your Email' className='mt-3 w-full border p-3' {...register("Email",)} />
+                        <input placeholder='Enter product Name' className='mt-3 w-full border p-3' {...register("name",)} />
+                        <input placeholder='Your Name' className='mt-3 w-full border p-3' {...register("sublierName",)} />
+                        <input placeholder='Price..' className='mt-3 w-full border p-3' {...register("cost",)} />
+                        <input placeholder='Quentity' className='mt-3 w-full border p-3' {...register("Quantity",)} />
 
-                        <textarea placeholder='Writen your text-' className='mt-3 w-full border p-3' {...register("dec")} />
+                        <textarea placeholder='Writen your text-' className='mt-3 w-full border p-3' {...register("description")} />
                         <input placeholder='Img URL' className='mt-3 w-full border p-3 mb-3' type="text" {...register("img")} />
                         <input type="submit" className='btn' />
                     </form>
