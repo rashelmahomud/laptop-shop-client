@@ -69,6 +69,7 @@ const MyOrder = () => {
                             <th>Prise</th>
                             <th>Email</th>
                             <th>Phone</th>
+                            <th>Pay</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
@@ -80,6 +81,7 @@ const MyOrder = () => {
                                 <td>{order.cost}</td>
                                 <td>{user.email}</td>
                                 <td>{order.number}</td>
+                                <td><button class="btn btn-xs font-bold bg-green-600">Pay</button></td>
                                 <td><button onClick={() => handelDeleteOrder(order._id)} class="btn btn-xs font-bold bg-red-600">Delete</button></td>
                             </tr>)
                         }
