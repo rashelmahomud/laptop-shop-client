@@ -13,7 +13,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?userEmail=${user.email}`, {
+            fetch(`https://polar-spire-39773.herokuapp.com/order?userEmail=${user.email}`, {
                 method: 'GET',
                 headers: {
                     'authorization': `bearer ${localStorage.getItem('accessToken')}`

@@ -23,7 +23,7 @@ const OrderModal = ({ orders, setOrders }) => {
             number: event.target.number.value
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://polar-spire-39773.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

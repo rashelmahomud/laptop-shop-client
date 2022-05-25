@@ -5,7 +5,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/review`;
+        const url = `https://polar-spire-39773.herokuapp.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -28,7 +28,7 @@ const AddProduct = () => {
             <h1 className='text-2xl font-bold'>Add Products</h1>
 
             <div>
-            
+
 
 
                 <div className='border lg:m-20 p-5'>

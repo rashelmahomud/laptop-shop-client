@@ -22,7 +22,7 @@ const Details = () => {
             return;
         }
 
-        fetch(`http://localhost:5000/service/${servicesId}`, {
+        fetch(`https://polar-spire-39773.herokuapp.com/service/${servicesId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
