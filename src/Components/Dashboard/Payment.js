@@ -1,11 +1,15 @@
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
 import React from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import Loading from '../Shared/Loading/Loading';
+import CheckoutForm from './CheckoutForm';
 
+const stripePromise = loadStripe('pk_test_51L0gQEDIV23r720zVb2664zCzLs7pDsomY6RCPFitr0nePAQjCZf6YHaWIaNwIZ7jJN5DJhS0cYJcqkPriJQgNnr002JDW73GU');
 const Payment = () => {
     const { id } = useParams();
-    const url = `http://localhost:5000/order/${id}`
+    const url = `https://polar-spire-39773.herokuapp.com/order/${id}`;
     const { data: sentBill, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
         headers: {
@@ -32,9 +36,9 @@ const Payment = () => {
             <div class="card w-96 bg-base-100 shadow-xl mt-5">
                 <div class="card-body">
 
-                    {/* <Elements stripe={stripePromise}>
-                        <CheckoutForm apoinment={apoinment} />
-                    </Elements> */}
+                    <Elements stripe={stripePromise}>
+                        <CheckoutForm sentBill={sentBill} />
+                    </Elements>
 
                 </div>
             </div>
