@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Service = ({ service,setOrders }) => {
 
-    const { _id,img, description, name, cost, Quantity, sublierName } = service;
+    const { _id,img, description,TotalQuentity, name, cost, Quantity, sublierName } = service;
 
     const navigate= useNavigate();
 
@@ -18,6 +18,7 @@ const Service = ({ service,setOrders }) => {
                 <h2 className='text-2xl font-bold'>{name}</h2>
                 <p>{description}</p>
                 <p>price: ${cost}</p>
+                <p>Total Quentity {TotalQuentity}</p>
                 <p>Quentity {Quantity}</p>
                 <p>Name: {sublierName}</p>
                 <div class="card-actions justify-center">

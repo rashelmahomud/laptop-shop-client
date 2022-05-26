@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
 import useServiceDetails from '../hook/useServiceDetails';
 import OrderModal from './OrderModal';
@@ -9,6 +10,7 @@ const Details = () => {
     const [orders, setOrders] = useState(null);
     const [service, setService] = useServiceDetails(servicesId);
 
+    const { register, handleSubmit } = useForm();
     const handelDelivery = () => {
         console.log('hello dear delivery');
 
@@ -41,6 +43,7 @@ const Details = () => {
 
     }
 
+
     return (
         <div className='border lg:px-40 lg:py-5'>
 
@@ -50,6 +53,7 @@ const Details = () => {
                     <h2 className='text-2xl font-bold'>{service.name}</h2>
                     <p>{service.description}</p>
                     <p className='font-bold'>{service.cost}</p>
+                    <p className='font-bold'>Total Quentity {service.TotalQuentity}</p>
                     <p className='font-bold'>Quentity {service.Quantity}</p>
                     <p>{service.sublierName}</p>
                     <div class="card-actions justify-center">
@@ -57,6 +61,13 @@ const Details = () => {
                         <label onClick={() => setOrders(service)} for="my-modal-3" class="btn modal-button btn btn-primary">Order Now</label>
                     </div>
                 </div>
+
+                {/* <div className='my-10 text-center border'>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input placeholder='Quentity Add' type="number" name="Quantity" {...register("Quantity", { min: 110, max: 1000 })} />
+                        <input className='btn' type="submit" value="Add Quantity" />
+                    </form>
+                </div> */}
 
                 <div className='my-10 text-center border'>
                     <form onSubmit={updateQuantity}>
