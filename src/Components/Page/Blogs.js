@@ -12,7 +12,7 @@ const Blogs = () => {
                 </div>
                 <div class="collapse-content">
                     a. Using Immutable Data Structures<br />
-                    b. Function/Stateless Components and React.PureComponent<br />
+                    b. Function/Stateless Components and great and React.PureComponent<br />
                     <p>How Will Your imporve The perfomance of a React Applications.</p>
                     c. Multiple Chunk Files<br />
                     d. Using Production Mode Flag in Webpack<br />
