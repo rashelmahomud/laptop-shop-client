@@ -1,11 +1,12 @@
 import React from 'react';
 
 const CustomerReview = ({ review }) => {
-    const { img,Name, Email, dec } = review;
+    const { img, Name, Email, dec } = review;
     return (
         <div className='flex mx-10 gap-10'>
             <div>
-                <div class="avatar">
+                <div class="avatar" data-aos="zoom-in-right"
+                    data-aos-duration="3000">
                     <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                         <img src={img} />
                     </div>
