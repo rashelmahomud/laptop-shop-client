@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <section className='my-36 bg-accent' 
+        <section className='mt-20 bg-accent' 
             // style={{
             //     background: `url(${contactBg})`
             // }}
