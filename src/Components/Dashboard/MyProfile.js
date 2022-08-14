@@ -1,5 +1,4 @@
-import { map } from '@firebase/util';
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import auth from '../../firebase.init';
@@ -55,7 +54,7 @@ const MyProfile = ({ order }) => {
 
                                         <div class="avatar">
                                             <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                                <img src={profile.img} />
+                                                <img src={user.photoURL} alt="img" />
                                             </div>
                                         </div>
                                         <h1 className='text-2xl font-bold '><span className='font-bold'></span> {user.displayName}</h1>
@@ -66,7 +65,7 @@ const MyProfile = ({ order }) => {
                                     </div>
                                 </div>)
                             }
-                         
+
 
                         </div>
 
@@ -77,13 +76,13 @@ const MyProfile = ({ order }) => {
             {/* import for code */}
             <div class="hero">
                 <div class="hero-content">
-                  
+
 
                     <div class="card  shadow-2xl bg-base-300">
                         <div class="card-body">
                             <div class="form-control">
                                 <div className='rounded lg:m-20 p-5'>
-                                <h3 className='text-3xl font-bold'>You Can Add Your Profile Here!</h3>
+                                    <h3 className='text-3xl font-bold'>You Can Add Your Profile Here!</h3>
                                     <form className='m-5 d-flex mx-auto flex-column w-50' onSubmit={handleSubmit(onSubmit)}>
                                         <input placeholder='Present Educations..' className='mt-3 w-full rounded bg-base-200 p-3' {...register("Name",)} />
                                         <input placeholder='Phone Number' className='mt-3 w-full rounded bg-base-200 p-3' {...register("Phone",)} />
