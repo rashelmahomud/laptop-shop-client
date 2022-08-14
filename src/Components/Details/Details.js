@@ -47,7 +47,7 @@ const Details = () => {
     return (
         <div className='border lg:px-40 lg:py-5'>
 
-            <div class="card bg-base-100 shadow-xl justify-content-center">
+            <div class="card bg-base-200 shadow-xl justify-content-center lg:p-5">
                 <figure><img className='rounded' style={{ width: 400 }} src={service.img} alt="Shoes" /></figure>
                 <div class="card-body text-center">
                     <h2 className='text-2xl font-bold'>{service.name}</h2>
@@ -69,10 +69,13 @@ const Details = () => {
                     </form>
                 </div> */}
 
-                <div className='my-10 text-center border'>
+                <div className='my-10 text-center'>
                     <form onSubmit={updateQuantity}>
-                        <input placeholder='Quentity Add' type="number" name="quantity" id="" />
-                        <input className='btn' type="submit" value="Add Quantity" />
+
+                        <input type="number" placeholder="Quentity ADD" class="input w-full max-w-xs bg-base-300" name="quantity" />
+
+                        {/* <input placeholder='Quentity Add' type="number" name="quantity" id="" /> */}
+                        <input className='btn btn-primary' type="submit" value="Add Quantity" />
                     </form>
                 </div>
 

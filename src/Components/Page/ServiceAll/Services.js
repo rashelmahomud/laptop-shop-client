@@ -12,10 +12,14 @@ const Services = () => {
     }, [])
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 my-10'>
-            {
-                servies.map(service => <Service key={service._id}  service={service} ></Service>)
-            }
+        <div>
+            <div><h2 className='text-center text-3xl my-20'>ALL PRODUCTS<br /> <progress class="progress w-56"></progress></h2></div>
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 my-10'>
+                {
+                    servies.map(service => <Service key={service._id} service={service} ></Service>)
+                }
+            </div>
         </div>
     );
 };

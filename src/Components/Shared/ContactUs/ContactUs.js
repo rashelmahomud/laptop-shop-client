@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactUs = () => {
     return (
-        <section className='mt-20 bg-accent' 
+        <section className='mt-20 bg-base-200' 
             // style={{
             //     background: `url(${contactBg})`
             // }}
@@ -11,7 +11,7 @@ const ContactUs = () => {
             <div className='p-10'>
                 <div className='grid justify-items-center mb-5'>
                     <h1 className='text-primary text-2xl font-bold'>contact Us</h1>
-                    <h4 className='text-white text-5xl font-bold'>Say Conected with us</h4>
+                    <h4 className=' text-5xl font-bold'>Say Conected with us</h4>
                 </div>
                 <div className='grid justify-items-center'>
                     <input className='w-80 rounded-lg p-3' type="text" placeholder='Email Address' /> <br />

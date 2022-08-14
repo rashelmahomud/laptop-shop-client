@@ -12,7 +12,7 @@ const Service = ({ service, setOrders }) => {
     }
 
     return (
-        <div class="card w-100 bg-base-100 shadow-xl justify-content-center">
+        <div class="card w-100 bg-base-200 shadow-xl justify-content-center">
             <figure><img data-aos="flip-left"
                 data-aos-duration="2000" className='rounded' src={img} alt="Shoes" /></figure>
             <div class="card-body text-center">

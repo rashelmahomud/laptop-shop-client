@@ -6,8 +6,8 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div className="bg-base-200">
-            <footer className="footer p-10 bg-base-200 text-base-content">
+        <div className="bg-base-300">
+            <footer className="footer p-10 bg-base-300 text-base-content">
                 <div className="md:w-60">
                     <img
                         className="mx-auto lg:mx-auto"

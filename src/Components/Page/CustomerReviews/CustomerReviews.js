@@ -10,7 +10,7 @@ const CustomerReviews = () => {
     },[])
     return (
         <div>
-            <h1 className='text-center font-bold text-4xl text-secondary'>Our Happy Customer {reviews.length}</h1>
+            <h1 className='text-center font-bold text-4xl text-primary'>Our Happy Customer {reviews.length}</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 p-10 gap-10'>
 
                 {

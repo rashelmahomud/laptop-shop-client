@@ -21,14 +21,14 @@ const Navber = ({ handleThemeChange, theme }) => {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
 
-        <button
+        <li><button
 
             onClick={handleThemeChange}
             className="rounded-full lg:mx-2 font-bold pr-2">
 
             {theme ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}
 
-        </button>
+        </button></li>
 
 
         <li>{user ? <button onClick={logout} className="btn btn-ghost font-bold">SignOut</button> : <Link to="/login">Login</Link>}</li>

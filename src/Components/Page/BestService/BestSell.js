@@ -2,7 +2,7 @@ import React from 'react';
 
 const BestSell = ({ service }) => {
     return (
-        <div className='border p-10 grid justify-items-center'>
+        <div className='rounded p-10 grid justify-items-center bg-base-200'>
 
             <img style={{ width: 200 }} src={service.img} alt="Shoes" className="rounded-xl text-center" />
 
