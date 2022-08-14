@@ -22,12 +22,25 @@ import AddProduct from './Components/Dashboard/AddProduct';
 import ManageOrders from './Components/Dashboard/ManageOrders';
 import RequirAdmin from './Components/Shared/RequirAdmin';
 import Payment from './Components/Dashboard/Payment';
+import { useEffect, useState } from 'react';
 
 function App() {
-  return (
-    <div>
+  const [theme, setTheme] = useState(false);
 
-      <Navber></Navber>
+
+  useEffect(() => {
+    setTheme(JSON.parse(window.localStorage.getItem("theme")));
+  }, []);
+
+  const handleThemeChange = () => {
+    setTheme(!theme);
+    window.localStorage.setItem("theme", !theme);
+  };
+
+  return (
+    <div data-theme={theme && "my_dark"}>
+
+      <Navber handleThemeChange={handleThemeChange} theme={theme}></Navber>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>

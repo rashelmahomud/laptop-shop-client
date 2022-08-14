@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
-const Navber = () => {
+const Navber = ({ handleThemeChange, theme }) => {
     const [user, loading, error] = useAuthState(auth);
     const logout = () => {
         signOut(auth);
@@ -20,6 +20,16 @@ const Navber = () => {
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
         }
+
+        <button
+
+            onClick={handleThemeChange}
+            className="rounded-full lg:mx-2 font-bold pr-2">
+
+            {theme ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}
+
+        </button>
+
 
         <li>{user ? <button onClick={logout} className="btn btn-ghost font-bold">SignOut</button> : <Link to="/login">Login</Link>}</li>
     </>
@@ -44,10 +54,10 @@ const Navber = () => {
                 </ul>
             </div>
             <div className='navbar-end'>
-            <label tabindex="0" for="my-drawer-2" className="btn btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-            </label>
-        </div>
+                <label tabindex="0" for="my-drawer-2" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+            </div>
         </div>
     );
 };
