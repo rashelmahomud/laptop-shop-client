@@ -35,7 +35,7 @@ const Navber = ({ handleThemeChange, theme }) => {
     </>
 
     return (
-        <div className="navbar bg-gray-200 px-10">
+        <div className="navbar border-b sticky top-0 w-full z-50 lg:px-10  bg-slate-100 bg-opacity-10 backdrop-filter backdrop-blur-lg">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const Navber = ({ handleThemeChange, theme }) => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">LAPTOP PARTS</a>
+                <a href='https://laptop-pats.web.app/' className="btn btn-ghost normal-case text-xl">LAPTOP PARTS</a>
             </div>
             <div className="navbar-end hidden lg:flex font-bold">
                 <ul className="menu menu-horizontal p-0">
