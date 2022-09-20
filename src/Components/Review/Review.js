@@ -5,7 +5,7 @@ const Review = ({ review }) => {
     const { img, count, name } = review;
     return (
         <div className='grid justify-items-center' >
-            <div class="card w-96 bg-base-200 shadow-xl">
+            <div class="card w-72 lg:w-96 bg-base-200 shadow-xl">
                 <figure class="px-10 pt-10">
                     <img src={img} alt="Shoes" class="rounded-xl" />
                 </figure>
