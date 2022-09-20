@@ -27,7 +27,8 @@ const Banner = () => {
         // </div>
         <div className="banner-image hero min-h-screen hellotop mx-auto">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={img} />
+                <img data-aos="flip-right"
+                data-aos-duration="2000" src={img} />
                 <div className='mr-20 mt-5'>
                     <h1 className="text-5xl font-bold">Welcome to Our Shops</h1>
                     <h1 className="text-5xl font-bold">Hello Dear Customers!</h1>
