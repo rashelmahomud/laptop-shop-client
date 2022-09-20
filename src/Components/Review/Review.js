@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Review = ({ review }) => {
 
     const { img, count, name } = review;
+ 
+
     return (
         <div className='grid justify-items-center' >
             <div class="card w-72 lg:w-96 bg-base-200 shadow-xl">
