@@ -1,10 +1,14 @@
 .banner-image{
-    background-image: url(../../assects/image/100.png);
+    background-image: url(../../assects/image/bannerbg.svg);
     height: 95vh;
     width: 100%;
     background-size: cover;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+}
+
+.hellotop {
+    margin-top: -3rem;
 }
 .title.container{
     position: relative;
