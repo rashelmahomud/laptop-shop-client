@@ -11,7 +11,7 @@ const ContactUs = () => {
             <div className="hero min-h-screen hellotop mx-auto ">
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
-                    <div className='lg:p-10 p-3'>
+                    <div className='lg:p-10 p-3 bg-base-300 rounded'>
                         <div className='grid justify-items-center'>
                             <input className='lg:w-80 rounded-lg p-3' type="text" placeholder='Email Address' /> <br />
                             <input className='lg:w-80 rounded-lg p-3' type="text" placeholder='subject' /> <br />
