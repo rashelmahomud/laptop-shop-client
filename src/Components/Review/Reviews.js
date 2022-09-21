@@ -4,6 +4,8 @@ import project from '../../assects/image/22.png';
 import clients from '../../assects/image/33.png';
 import feedback from '../../assects/image/44.png';
 import CountUp from 'react-countup';
+import './Review.css'
+import img from '../../assects/girl.png'
 
 import Review from './Review';
 
@@ -54,7 +56,11 @@ const Reviews = () => {
         <div>
 
             <h1 className="text-5xl font-bold text-center mt-20">Our Business History</h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 my-20'>
+            
+            <img className='hidden absolute hidden p-4 py-6 text-white lg:w-80 lg:flex-shrink-0 lg:flex lg:flex-col lg:items-center lg:justify-evenly lg:ml-72 lg:w-8/12' src={img} />
+
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 my-20 relative'>
+                
 
                 {
                     reviews.map(review => <Review key={review._id} review={review}></Review>)
