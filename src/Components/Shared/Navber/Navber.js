@@ -36,6 +36,7 @@ const Navber = ({ handleThemeChange, theme }) => {
 
     return (
         <div className="navbar sticky top-0 w-full z-50 lg:px-10  bg-slate-100 bg-opacity-10 backdrop-filter backdrop-blur-lg">
+
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabindex="0" className="btn btn-ghost lg:hidden">
@@ -46,13 +47,17 @@ const Navber = ({ handleThemeChange, theme }) => {
 
                     </ul>
                 </div>
+
                 <a href='https://laptop-pats.web.app/' className="btn btn-ghost normal-case text-xl">LAPTOP PARTS</a>
             </div>
+            
             <div className="navbar-end hidden lg:flex font-bold">
                 <ul className="menu menu-horizontal p-0">
                     {navbermenu}
                 </ul>
             </div>
+        
+
             {/* <div className='navbar-end'>
                 <label tabindex="0" for="my-drawer-2" className="btn btn-ghost lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
