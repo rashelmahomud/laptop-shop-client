@@ -12,14 +12,13 @@ const Service = ({ service, setOrders }) => {
     }
 
     return (
-        <div class="card w-100 bg-base-200 shadow-xl mx-auto justify-content-center">
+        <div class="card w-100 bg-base-200 shadow-xl mx-auto justify-content-center transition duration-700 ease-in-out">
             <figure><img data-aos="flip-left"
                 data-aos-duration="2000" className='rounded' src={img} alt="Shoes" /></figure>
             <div class="card-body text-center">
-                <h2 className='text-2xl font-bold'>{name}</h2>
+                {/* <h2 className='text-2xl font-bold'>{name}</h2> */}
                 <p>{description}</p>
                 <p>price: ${cost}</p>
-                <p>Name: {sublierName}</p>
                 <div class="card-actions justify-center">
                     <button onClick={() => handelerbtn(_id)} class="btn btn-primary">Buy Now</button>
                 </div>

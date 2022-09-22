@@ -55,26 +55,15 @@ const Details = () => {
                     <p className='font-bold'>{service.cost}</p>
                     <p className='font-bold'>Total Quentity {service.TotalQuentity}</p>
                     <p className='font-bold'>Quentity {service.Quantity}</p>
-                    <p>{service.sublierName}</p>
                     <div class="card-actions justify-center">
-                        {/* <button onClick={() => setOrders(service)} class="btn btn-primary">Order Now</button> */}
                         <label onClick={() => setOrders(service)} for="my-modal-3" class="btn modal-button btn btn-primary">Order Now</label>
                     </div>
                 </div>
-
-                {/* <div className='my-10 text-center border'>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <input placeholder='Quentity Add' type="number" name="Quantity" {...register("Quantity", { min: 110, max: 1000 })} />
-                        <input className='btn' type="submit" value="Add Quantity" />
-                    </form>
-                </div> */}
 
                 <div className='my-10 text-center'>
                     <form onSubmit={updateQuantity}>
 
                         <input type="number" placeholder="Quentity ADD" class="input w-full max-w-xs bg-base-300" name="quantity" />
-
-                        {/* <input placeholder='Quentity Add' type="number" name="quantity" id="" /> */}
                         <input className='btn btn-primary' type="submit" value="Add Quantity" />
                     </form>
                 </div>
