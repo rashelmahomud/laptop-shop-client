@@ -58,13 +58,13 @@ function App() {
           </RequirAuth>
         }>
           <Route index element={<MyOrder></MyOrder>}></Route>
-          <Route path='review' element={<AddReview></AddReview>}></Route>
-          <Route path='profile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='payment/:id' element={<Payment></Payment>}></Route>
+          <Route path='/dashboard/review' element={<AddReview></AddReview>}></Route>
+          <Route path='/dashboard/profile' element={<MyProfile></MyProfile>}></Route>
+          <Route path='/dashboard/payment/:id' element={<Payment></Payment>}></Route>
 
-          <Route path='users' element={<RequirAdmin><Users></Users></RequirAdmin>}></Route>
-          <Route path='addproduct' element={<RequirAdmin><AddProduct></AddProduct></RequirAdmin>}></Route>
-          <Route path='manageorder' element={<RequirAdmin><ManageOrders></ManageOrders></RequirAdmin>}></Route>
+          <Route path='/dashboard/users' element={<RequirAdmin><Users></Users></RequirAdmin>}></Route>
+          <Route path='/dashboard/addproduct' element={<RequirAdmin><AddProduct></AddProduct></RequirAdmin>}></Route>
+          <Route path='/dashboard/manageorder' element={<RequirAdmin><ManageOrders></ManageOrders></RequirAdmin>}></Route>
         </Route>
 
         <Route path='/login' element={<Login></Login>}></Route>

@@ -27,7 +27,7 @@ const SignUp = () => {
     let loginError;
 
    if(token){
-       navigate('/home')
+       navigate('/')
    };
 
     if (gLoading || loading || updating) {
@@ -129,7 +129,7 @@ const SignUp = () => {
                         {/* //passworld for */}
 
                         {loginError}
-                        <input className='w-full btn text-white' value='Sign Up' type="submit" />
+                        <input className='w-full bg-orange-500 btn text-white' value='Sign Up' type="submit" />
                     </form>
 
                     <div className="divider">OR</div>

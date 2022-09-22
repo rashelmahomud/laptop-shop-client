@@ -12,15 +12,15 @@ const Service = ({ service, setOrders }) => {
     }
 
     return (
-        <div class="card w-100 bg-base-200 shadow-xl mx-auto justify-content-center transition duration-700 ease-in-out">
+        <div class="card w-100 bg-base-300 shadow-xl mx-auto justify-content-center transition duration-700 ease-in-out">
             <figure><img data-aos="flip-left"
                 data-aos-duration="2000" className='rounded' src={img} alt="Shoes" /></figure>
             <div class="card-body text-center">
                 {/* <h2 className='text-2xl font-bold'>{name}</h2> */}
-                <p>{description}</p>
-                <p>price: ${cost}</p>
+                <p className='text-justify'>{description}</p>
+                <p className='text-left'>price: ${cost}</p>
                 <div class="card-actions justify-center">
-                    <button onClick={() => handelerbtn(_id)} class="btn btn-primary">Buy Now</button>
+                    <button onClick={() => handelerbtn(_id)} class="btn text-white w-full btn-outline btn-primary">Buy Now</button>
                 </div>
             </div>
         </div>

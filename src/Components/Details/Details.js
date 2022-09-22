@@ -56,7 +56,7 @@ const Details = () => {
                     <p className='font-bold'>Total Quentity {service.TotalQuentity}</p>
                     <p className='font-bold'>Quentity {service.Quantity}</p>
                     <div class="card-actions justify-center">
-                        <label onClick={() => setOrders(service)} for="my-modal-3" class="btn modal-button btn btn-primary">Order Now</label>
+                        <label onClick={() => setOrders(service)} for="my-modal-3" class="btn modal-button btn btn-outline btn-primary">Order Now</label>
                     </div>
                 </div>
 
@@ -64,7 +64,7 @@ const Details = () => {
                     <form onSubmit={updateQuantity}>
 
                         <input type="number" placeholder="Quentity ADD" class="input w-full max-w-xs bg-base-300" name="quantity" />
-                        <input className='btn btn-primary' type="submit" value="Add Quantity" />
+                        <input className='btn btn-outline btn-primary' type="submit" value="Add Quantity" />
                     </form>
                 </div>
 

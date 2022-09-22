@@ -113,7 +113,7 @@ const Login = () => {
                         {/* //passworld for */}
 
                         {loginError}
-                        <input className='w-full btn text-white' value='login' type="submit" />
+                        <input className='w-full btn bg-orange-500 text-white' value='login' type="submit" />
                     </form>
 
                     <div className="divider">OR</div>
