@@ -1,45 +1,49 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import Loading from '../Shared/Loading/Loading';
 
-const CheckoutForm = ({ sentBill }) => {
-    const elements = useElements();
+const CheckoutForm = ({ payBill }) => {
     const stripe = useStripe();
-    const [cardError, setCardError] = useState('')
-
-    const { cost } = sentBill;
-
+    const elements = useElements();
+    const [cardError, setCardError] = useState('');
     const [clientSecret, setClientSecret] = useState('');
+    const [success, setSuccess] = useState('');
+    const [transionId, setTransionId] = useState('');
+
+    const { cost, userEmail, orderName } = payBill;
 
     useEffect(() => {
 
-        fetch('https://polar-spire-39773.herokuapp.com/create-payment-intent', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                'authorization': `bearer ${localStorage.getItem('accessToken')}`
+        if (cost) {
+            fetch('http://localhost:5000/create-payment-intent', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                },
 
+                body: JSON.stringify({ cost }),
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data?.clientSecret) {
+                        setClientSecret(data?.clientSecret);
+                    }
+                });
+        }
+    }, [cost]);
 
-            },
-            body: JSON.stringify({ cost })
-        })
-            .then(res => res.json())
-            .then(data => {
-
-                if (data?.clientSecret) {
-                    setClientSecret(data.clientSecret);
-                }
-            });
-
-
-    }, [cost])
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        if (!stripe || !elements) {
 
+        if (!stripe || !elements) {
             return;
         }
 
+        // if (isLoading) {
+        //     return <Loading></Loading>
+        // }
         const card = elements.getElement(CardElement);
 
         if (card == null) {
@@ -51,18 +55,37 @@ const CheckoutForm = ({ sentBill }) => {
             card,
         });
 
+        setCardError(error?.message || '')
+        setSuccess('');
 
-        setCardError(error?.message || '');
+        // comfrom card payment 
 
+        const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
+            clientSecret,
+            {
+                payment_method: {
+                    card: card,
+                    billing_details: {
+                        name: orderName,
+                        email: userEmail,
+                    },
+                },
+            },
+        );
 
+        if (intentError) {
+            setCardError(intentError?.message)
+        } else {
+            setCardError('');
+            setTransionId(paymentIntent.id)
+            setSuccess('your payment is completed')
 
-
-
+        }
 
     }
+
     return (
         <>
-
             <form onSubmit={handleSubmit}>
                 <CardElement
                     options={{
@@ -80,15 +103,16 @@ const CheckoutForm = ({ sentBill }) => {
                         },
                     }}
                 />
-                <button className='btn btn-success btn-sx mt-5' type="submit" disabled={!stripe}>
+                <button className='btn btn-success mt-3' type="submit" disabled={!stripe || !clientSecret}>
                     Pay
                 </button>
             </form>
 
-            {
-                cardError && <p className='text-red-600'>{cardError}</p>
-            }
-
+            {cardError && <p className='text-red-500'>{cardError}</p>}
+            {success && <div className='text-green-500'>
+                <p>{success}</p>
+                <p>your Payment Id: {transionId}</p>
+            </div>}
         </>
     );
 };
