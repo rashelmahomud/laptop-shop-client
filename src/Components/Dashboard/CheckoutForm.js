@@ -15,7 +15,7 @@ const CheckoutForm = ({ payBill }) => {
     useEffect(() => {
 
         if (cost) {
-            fetch('http://localhost:5000/create-payment-intent', {
+            fetch('https://laptop-shop.onrender.com/create-payment-intent', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
