@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const Users = () => {
-    const { data: users, isLoading,refetch } = useQuery('users', () => fetch('https://polar-spire-39773.herokuapp.com/user',{
+    const { data: users, isLoading,refetch } = useQuery('users', () => fetch('https://laptop-shop.onrender.com/user',{
         method:'GET',
         headers: {
             authorization: `bearer ${localStorage.getItem('accessToken')}`

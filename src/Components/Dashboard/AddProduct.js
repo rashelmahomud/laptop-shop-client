@@ -5,7 +5,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `https://polar-spire-39773.herokuapp.com/service`;
+        const url = `https://laptop-shop.onrender.com/service`;
         fetch(url, {
             method: 'POST',
             headers: {

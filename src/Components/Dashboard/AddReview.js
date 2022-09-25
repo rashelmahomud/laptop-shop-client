@@ -6,7 +6,7 @@ const AddReview = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `https://polar-spire-39773.herokuapp.com/review`;
+        const url = `https://laptop-shop.onrender.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {

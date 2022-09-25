@@ -24,7 +24,7 @@ const Details = () => {
             return;
         }
 
-        fetch(`https://polar-spire-39773.herokuapp.com/service/${servicesId}`, {
+        fetch(`https://laptop-shop.onrender.com/service/${servicesId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

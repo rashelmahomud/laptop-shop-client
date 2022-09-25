@@ -7,7 +7,7 @@ const useServiceDetails = servicesId => {
   
 
     useEffect(() => {
-        const url = `https://polar-spire-39773.herokuapp.com/service/${servicesId}`;
+        const url = `https://laptop-shop.onrender.com/service/${servicesId}`;
         console.log(url);
         fetch(url)
             .then(res => res.json())

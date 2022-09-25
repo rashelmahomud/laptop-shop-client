@@ -8,14 +8,14 @@ const MyProfile = ({ order }) => {
     const [profiles, setProfiles] = useState([]);
     const { register, handleSubmit } = useForm();
     useEffect(() => {
-        fetch('https://polar-spire-39773.herokuapp.com/profile')
+        fetch('https://laptop-shop.onrender.com/profile')
             .then(res => res.json())
             .then(data => setProfiles(data))
     }, [])
 
     const onSubmit = data => {
         // console.log("hello", data);
-        const url = `https://polar-spire-39773.herokuapp.com/profile`;
+        const url = `https://laptop-shop.onrender.com/profile`;
         fetch(url, {
             method: 'POST',
             headers: {
