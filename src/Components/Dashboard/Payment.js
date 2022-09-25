@@ -12,7 +12,7 @@ const Payment = () => {
 
     const { id } = useParams();
 
-    const url = `http://localhost:5000/order/${id}`
+    const url = `https://laptop-shop.onrender.com/order/${id}`
     const { data: payBill, isLoading } = useQuery(['order', id], () => fetch(url, {
         method: 'GET',
         headers: {
@@ -30,7 +30,7 @@ const Payment = () => {
                 <div class="card w-96 bg-base-300 shadow-xl justify-center">
                     <div class="card-body">
                         <h1>hello{id}</h1>
-                        <h3>Hey.. : <span className='text-secondary font-bold uppercase'>{payBill?.orderName}</span></h3>
+                        <h3>Hey.. : <span className='text-secondary font-bold uppercase'>{payBill.orderName}</span></h3>
                         <h2 class="card-title">{payBill.userEmail}</h2>
                         <h2 class="card-title">Contact : {payBill.number}</h2>
                         <p>Total price: ${payBill.cost}</p>
