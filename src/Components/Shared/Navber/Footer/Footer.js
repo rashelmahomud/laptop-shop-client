@@ -19,8 +19,8 @@ const Footer = () => {
                     <p className="font-bold text-xl text-center">
                         Create your free account and start learning
                     </p>
-                    <a href="">
-                        <button className="btn text-white btn-sm lg:ml-16 mx-24 md:mx-16">
+                    <a href="signup">
+                        <button className="btn btn-primary mt-5 text-white">
                             Join Now
                         </button>
                     </a>

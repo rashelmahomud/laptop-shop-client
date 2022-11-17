@@ -23,6 +23,7 @@ import ManageOrders from './Components/Dashboard/ManageOrders';
 import RequirAdmin from './Components/Shared/RequirAdmin';
 import Payment from './Components/Dashboard/Payment';
 import { useEffect, useState } from 'react';
+import SuperService from './Components/Shared/Navber/SuperService';
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -44,6 +45,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/service' element={<SuperService></SuperService>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/fotfolio' element={<Fotfolio></Fotfolio>}></Route>
         <Route path='/details/:servicesId' element={
