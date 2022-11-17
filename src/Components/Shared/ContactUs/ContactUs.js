@@ -2,13 +2,13 @@ import React from 'react';
 import contact from '../../../assects/contact.png';
 const ContactUs = () => {
     return (
-        <div>
-            <div className='grid justify-items-center my-5'>
+        <div className='my-10'>
+            <div className='grid justify-items-center '>
                 <h1 className='text-primary text-2xl font-bold'>contact Us</h1>
-                <h4 className=' text-4xl font-bold'>Say Conected with us</h4>
+                <h4 className=' lg:text-4xl font-bold mb-10'>Say Conected with us</h4>
             </div>
 
-            <div className="hero min-h-screen hellotop mx-auto ">
+            <div className="hero min-h-screen hellotop mx-auto">
                 <div className="hero-content flex-col lg:flex-row-reverse">
 
                     <div className='lg:p-10 p-3 bg-base-300 rounded'>
