@@ -3,7 +3,7 @@ import contact from '../../../assects/contact.png';
 const ContactUs = () => {
     return (
         <div>
-            <div className='grid justify-items-center mb-5'>
+            <div className='grid justify-items-center my-5'>
                 <h1 className='text-primary text-2xl font-bold'>contact Us</h1>
                 <h4 className=' text-4xl font-bold'>Say Conected with us</h4>
             </div>
