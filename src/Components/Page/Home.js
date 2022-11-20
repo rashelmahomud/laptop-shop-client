@@ -5,14 +5,12 @@ import Footer from '../Shared/Navber/Footer/Footer';
 import Banner from './Banner';
 import BestSelling from './BestService/BestSelling';
 import CustomerReviews from './CustomerReviews/CustomerReviews';
-import ServiceHead from './ServiceAll/ServiceHead';
 import Services from './ServiceAll/Services';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <ServiceHead />
             <Services></Services>
             <Reviews></Reviews>
             <CustomerReviews></CustomerReviews>
