@@ -16,7 +16,7 @@ const Service = ({ service, setOrders }) => {
             <figure><img data-aos="flip-left"
                 data-aos-duration="2000" className='rounded' src={img} alt="Shoes" /></figure>
             <div class="card-body text-center">
-                {/* <h2 className='text-2xl font-bold'>{name}</h2> */}
+                <h2 className='text-2xl text-left font-bold'>{name}</h2>
                 <p className='text-justify'>{description}</p>
                 <p className='text-left'>price: ${cost}</p>
                 <div class="card-actions justify-center">

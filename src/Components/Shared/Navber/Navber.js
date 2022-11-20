@@ -28,7 +28,7 @@ const Navber = ({ handleThemeChange, theme }) => {
 
             {theme ? <i class="fa-solid fa-sun"></i> : <i class="fa-solid fa-moon"></i>}
         </button></li>
-
+        
 
         {/* <li>{user ? <button onClick={logout} className="btn btn-ghost font-bold">SignOut</button> : <Link to="/login">Login</Link>}</li> */}
     </>
@@ -47,15 +47,17 @@ const Navber = ({ handleThemeChange, theme }) => {
 
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">LAPTOP PARTS</Link>
-            </div>
 
+                <a href='https://laptop-pats.web.app/' className="btn btn-ghost normal-case text-xl">LAPTOP PARTS</a>
+                
+            </div>
+            
             <div className="navbar-end hidden lg:flex font-bold">
                 <ul className="menu menu-horizontal p-0">
                     {navbermenu}
                 </ul>
             </div>
-
+        
 
             {/* <div className='navbar-end'>
                 <label tabindex="0" for="my-drawer-2" className="btn btn-ghost lg:hidden">
@@ -65,7 +67,7 @@ const Navber = ({ handleThemeChange, theme }) => {
             {/* ================== */}
             {user ? (<div className="navbar-end">
                 <div className="dropdown dropdown-end">
-                    <label tabindex="0" className="btn btn-ghost btn-circle avatar">
+                    <label tabindex="0" className="btn btn-ghost btn-circle avatar">       
                         <div className="w-10 rounded-full">
                             <img src={user.photoURL} />
 
