@@ -17,7 +17,7 @@ const Navber = ({ handleThemeChange, theme }) => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/service">Service</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
-        <li><Link to="/fotfolio">Fotfolio</Link></li>
+        {/* <li><Link to="/fotfolio">Fotfolio</Link></li> */}
 
         {
             user && <li><Link to="/dashboard">Dashboard</Link></li>
@@ -67,6 +67,7 @@ const Navber = ({ handleThemeChange, theme }) => {
                 <div className="navbar-end hidden lg:flex font-bold">
                     <ul className="menu menu-horizontal p-0">
                         {navbermenu}
+                        
                     </ul>
                 </div>
 
