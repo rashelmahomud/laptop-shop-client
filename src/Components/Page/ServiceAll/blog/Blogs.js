@@ -5,7 +5,7 @@ const Blogs = () => {
 
     useEffect(() => {
 
-        fetch('/blog.json')
+        fetch('https://laptop-shop.onrender.com/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
 

@@ -16,7 +16,7 @@ const BlogsDetails = () => {
     const time = today.getMinutes();
 
     useEffect(() => {
-        fetch("/blog.json")
+        fetch("https://laptop-shop.onrender.com/blogs")
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [])
@@ -31,7 +31,7 @@ const BlogsDetails = () => {
 
     return (
         <div className=' lg:mx-20'>
-            <img className='mx-auto h-96 lg:w-4/5 p-5' src={newblog[0]?.img} alt='' />
+            <img className='mx-auto lg:h-96 lg:w-4/5 p-5' src={newblog[0]?.img} alt='' />
 
             <div className='text-left lg:mx-32 p-5'>
                 <p className='font-bold text-3xl'>{newblog[0]?.title}</p>
@@ -57,16 +57,16 @@ const BlogsDetails = () => {
                 <p className='font-bold my-3'>{newblog[0]?.dec1}</p>
 
             </div>
-            <div className='my-10 mx-32 p-5 text-gray-500'>
+            <div className='my-10 lg:mx-32 p-5 text-gray-500'>
                 <h1 className='text-center font-bold'>REVIEW ALL</h1>
                 <p className='font-bold'>{name}</p>
                 <p>{text}</p>
             </div>
 
-            <div className='mx-24 p-10'>
+            <div className='lg:mx-24 lg:p-10 p-3'>
                 <form onSubmit={handelSubmite} action="/action_page.php">
-                    <input type="text" name="text" placeholder="Type here" className="input input-bordered w-full max-w-xs left-0 mb-2" /> <br />
-                    <textarea className='border' placeholder="write your text" id="w3review" name="textarea" rows="4" cols="120"></textarea>
+                    <input type="text" name="text" placeholder="Type here" className="input input-bordered max-w-xs left-0 mb-2" /> <br />
+                    <textarea className='border w-full' placeholder="write your text" id="w3review" name="textarea" rows="4"></textarea>
                     <br />
                     <input className='btn' type="submit" value="Submit" />
                 </form>
