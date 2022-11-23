@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Details from './Components/Details/Details';
-import Blogs from './Components/Page/Blogs';
 import Home from './Components/Page/Home';
 import Login from './Components/Shared/Login/Login';
 import SignUp from './Components/Shared/Login/SignUp';
@@ -24,6 +23,8 @@ import RequirAdmin from './Components/Shared/RequirAdmin';
 import Payment from './Components/Dashboard/Payment';
 import Services from './Components/Page/AllProduct/Services'
 import { useEffect, useState } from 'react';
+import Blogs from './Components/Page/ServiceAll/blog/Blogs';
+import BlogsDetails from './Components/Page/ServiceAll/blog/BlogsDetails';
 
 function App() {
   const [theme, setTheme] = useState(false);
@@ -48,6 +49,7 @@ function App() {
         <Route path='/service' element={<Services></Services>}></Route>
 
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/detailsblogs/:blogId' element={<BlogsDetails></BlogsDetails>}></Route>
         <Route path='/fotfolio' element={<Fotfolio></Fotfolio>}></Route>
         <Route path='/details/:servicesId' element={
           <RequirAuth>
