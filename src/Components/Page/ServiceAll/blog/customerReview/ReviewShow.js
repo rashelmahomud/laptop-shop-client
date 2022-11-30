@@ -4,7 +4,7 @@ import Show from './Show';
 const ReviewShow = () => {
     const [data, setData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/blogReview')
+        fetch('https://laptop-shop.onrender.com/blogReview')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
