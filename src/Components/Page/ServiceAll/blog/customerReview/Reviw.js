@@ -5,7 +5,7 @@ const Reviw = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/blogReview`;
+        const url = `https://laptop-shop.onrender.com/blogReview`;
         fetch(url, {
             method: 'POST',
             headers: {
