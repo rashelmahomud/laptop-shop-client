@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useParams } from 'react-router-dom';
+import auth from '../../../../firebase.init';
+import ReviewShow from './customerReview/ReviewShow';
+import Reviw from './customerReview/Reviw';
 
 const BlogsDetails = () => {
+    const [user, loading, error] = useAuthState(auth);
 
     const { blogId } = useParams();
     const [blog, setBlog] = useState([]);
@@ -21,13 +26,13 @@ const BlogsDetails = () => {
             .then(data => setBlog(data))
     }, [])
 
-    const newblog = blog.filter(s => s._id == blogId)
+    const newblog = blog.filter(s => s._id === blogId)
 
-    const handelSubmite = (e) => {
-        e.preventDefault();
-        setName(e.target.text.value);
-        setText(e.target.textarea.value);
-    }
+    // const handelSubmite = (e) => {
+    //     e.preventDefault();
+    //     setName(e.target.text.value);
+    //     setText(e.target.textarea.value);
+    // }
 
     return (
         <div className=' lg:mx-20'>
@@ -57,20 +62,20 @@ const BlogsDetails = () => {
                 <p className='font-bold my-3'>{newblog[0]?.dec1}</p>
 
             </div>
-            <div className='my-10 lg:mx-32 p-5 text-gray-500'>
-                <h1 className='text-center font-bold'>REVIEW ALL</h1>
-                <p className='font-bold'>{name}</p>
-                <p>{text}</p>
+            <div>
+                <h1 className='lg:mx-20 lg:px-20 font-bold text-2xl'>REVIEW</h1>
+                <div className='lg:mx-32 lg:p-20 p-5 text-gray-500'>
+
+                    <ReviewShow />
+                </div>
+
+                <div className='lg:mx-24 lg:p-10 p-3'>
+                    <Reviw />
+                </div>
+
+
             </div>
 
-            <div className='lg:mx-24 lg:p-10 p-3'>
-                <form onSubmit={handelSubmite} action="/action_page.php">
-                    <input type="text" name="text" placeholder="Type here" className="input input-bordered max-w-xs left-0 mb-2" /> <br />
-                    <textarea className='border w-full' placeholder="write your text" id="w3review" name="textarea" rows="4"></textarea>
-                    <br />
-                    <input className='btn' type="submit" value="Submit" />
-                </form>
-            </div>
 
         </div>
     );
