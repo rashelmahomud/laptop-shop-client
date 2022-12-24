@@ -7,7 +7,8 @@ const Loading = () => {
             <HashLoader
                 color="#1774d5"
                 size={60}
-            />        </div>
+            />
+        </div>
     );
 };
 

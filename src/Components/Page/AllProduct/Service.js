@@ -6,7 +6,7 @@ const Service = ({ pdc, setOrders }) => {
     const { _id, img, description, name, cost } = pdc;
 
     const navigate = useNavigate();
-
+  
     const handelerbtn = (id) => {
         navigate(`/details/${id}`);
     }

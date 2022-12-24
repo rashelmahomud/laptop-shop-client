@@ -1,13 +1,27 @@
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
 import CustomerReview from './CustomerReview';
+import Loading from '../../Shared/Loading/Loading';
 
 const CustomerReviews = () => {
     const [reviews, setReviews] = useState([]);
-    useEffect( () => {
+    const [user, loading, error] = useAuthState(auth);
+
+    useEffect(() => {
         fetch('https://laptop-shop.onrender.com/review')
-        .then(res =>res.json())
-        .then(data => setReviews(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
+
+    if (loading) {
+        return (
+            <div>
+                <Loading />
+            </div>
+        );
+    }
     return (
         <div>
             <h1 className='text-center font-bold text-4xl text-primary'>Our Happy Customer {reviews.length}</h1>
