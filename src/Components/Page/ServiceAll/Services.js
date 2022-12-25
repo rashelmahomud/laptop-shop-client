@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../firebase.init';
-import Loading from '../../Shared/Loading/Loading';
 import Service from './Service';
 import ServiceHead from './ServiceHead';
 
 const Services = () => {
     const [servies, setServices] = useState([]);
-    const [loading] = useAuthState(auth);
 
 
     useEffect(() => {
@@ -16,13 +12,6 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
 
-    if (loading) {
-        return (
-            <div>
-                <Loading />
-            </div>
-        );
-    }
 
     return (
         <div>
