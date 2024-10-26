@@ -1,16 +1,38 @@
 [
-
-    {"_id":1,"img":"https://cdn.thefabricator.com/a/blm-group-usa-names-regional-sales-manager-for-canada-1554314235.webp?size=1000x","Email":"jack@gmail.com","Name":"jack", "dec":"The Apple Magic Mouse is a wireless and rechargeable mouse for Bluetooth-enabled Mac with  surface of the Magic"},
-    {"_id":2,"img":"https://cdn.thefabricator.com/a/blm-group-usa-names-sales-manager-for-eastern-canada-1638214749.webp?size=1000x","Email":"jackynedd@gmail.com","Name":"jacky sha", "dec":"The Apple Magic Mouse 4 or later. It comes with an optimized foot design that Multi-Touch surface of the Magic"},
-    {"_id":3,"img":"https://cdn.thefabricator.com/a/blm-group-usa-names-western-regional-sales-manager-1651172836.webp?size=1000x","Email":"robinKhan@gmail.com","Name":"robin son", "dec":"The Apple Magic Mouse 4 or later. It comes with an optimized foot design that letsMulti-Touch surface of the Magic"},
-    {"_id":4,"img":"https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/maxfit87-mk856/maxfit87-mk856-001-500x500.jpg","Email":"gatss@gmail.com","Name":"bilgets", "dec":"The Apple Magic Mouse is a  later. It comes with an optimized foot design that lets it glidesurface of the Magic"},
-    {"_id":5,"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_-OWDjmHkFmoBbgJm3MkDCrPODyooi1Akg&usqp=CAU","Email":"rashelmahomud@gmail.com","Name":"Rashel Mahomud", "dec":"The Apple with iPadOS 13.4 or later. It comes with an optimized foot design tha The Multi-Touch surface of the Magic"},
-    {"_id":6,"img":"https://goodmenproject.com/wp-content/uploads/2019/02/Dan.jpg.webp","Email":"tohimahomud@gmail.com","Name":"tohi mahomud", "dec":"The Apple Magic iPadOS 13.4 or later. It comes with an optimized foot design that  Multi-Touch surface of the Magic"}
-    
- 
-    
-
-    
-    
-    
-    ]
+  {
+    "img": "https://cdn.thefabricator.com/a/blm-group-usa-names-regional-sales-manager-for-canada-1554314235.webp?size=1000x",
+    "Email": "jack@gmail.com",
+    "Name": "jack",
+    "dec": "The Apple Magic Mouse is a wireless and rechargeable mouse for Bluetooth-enabled Mac with  surface of the Magic"
+  },
+  {
+    "img": "https://cdn.thefabricator.com/a/blm-group-usa-names-sales-manager-for-eastern-canada-1638214749.webp?size=1000x",
+    "Email": "jackynedd@gmail.com",
+    "Name": "jacky sha",
+    "dec": "The Apple Magic Mouse 4 or later. It comes with an optimized foot design that Multi-Touch surface of the Magic"
+  },
+  {
+    "img": "https://cdn.thefabricator.com/a/blm-group-usa-names-western-regional-sales-manager-1651172836.webp?size=1000x",
+    "Email": "robinKhan@gmail.com",
+    "Name": "robin son",
+    "dec": "The Apple Magic Mouse 4 or later. It comes with an optimized foot design that letsMulti-Touch surface of the Magic"
+  },
+  {
+    "img": "https://www.startech.com.bd/image/cache/catalog/keyboard/fantech/maxfit87-mk856/maxfit87-mk856-001-500x500.jpg",
+    "Email": "gatss@gmail.com",
+    "Name": "bilgets",
+    "dec": "The Apple Magic Mouse is a  later. It comes with an optimized foot design that lets it glidesurface of the Magic"
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_-OWDjmHkFmoBbgJm3MkDCrPODyooi1Akg&usqp=CAU",
+    "Email": "rashelmahomud@gmail.com",
+    "Name": "Rashel Mahomud",
+    "dec": "The Apple with iPadOS 13.4 or later. It comes with an optimized foot design tha The Multi-Touch surface of the Magic"
+  },
+  {
+    "img": "https://goodmenproject.com/wp-content/uploads/2019/02/Dan.jpg.webp",
+    "Email": "tohimahomud@gmail.com",
+    "Name": "tohi mahomud",
+    "dec": "The Apple Magic iPadOS 13.4 or later. It comes with an optimized foot design that  Multi-Touch surface of the Magic"
+  }
+]
