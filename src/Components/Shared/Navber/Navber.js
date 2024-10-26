@@ -160,8 +160,8 @@ const Navber = ({ handleThemeChange, theme }) => {
           </ul>
         </div>
 
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
-          LAPTOP PARTS
+        <Link to="/" className="font-bold normal-case text-2xl">
+          Laptop<span className="text-orange-500">Parts</span>
         </Link>
       </div>
 

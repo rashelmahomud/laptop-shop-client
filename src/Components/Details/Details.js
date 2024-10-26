@@ -53,7 +53,7 @@ const Details = () => {
         </figure>
         <div class="card-body text-center">
           <h2 className="text-2xl font-bold">{service.name}</h2>
-          <p>{service.description}</p>
+          <p className="text-gray-500">{service.description}</p>
           <p className="font-bold">{service.cost}</p>
           <p className="font-bold">Total Quentity {service.TotalQuentity}</p>
           <p className="font-bold">Quentity {service.Quantity}</p>

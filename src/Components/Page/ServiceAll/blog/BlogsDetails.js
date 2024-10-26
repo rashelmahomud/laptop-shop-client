@@ -65,12 +65,14 @@ const BlogsDetails = () => {
           </div>
         </div>
         <p className="font-bold my-3">{newblog[0]?.description}</p>
-        <span className="text-3xl font-bold">Description</span>
-        <p className="font-bold my-3 font-serif">{newblog[0]?.dec}</p>
+        <span className="text-3xl font-bold text-gray-500">Description</span>
+        <p className="font-bold my-3 font-serif text-gray-500">
+          {newblog[0]?.dec}
+        </p>
         <span className="text-3xl font-bold font-serif">
           Largest Chain of Computer Store in Bangladesh
         </span>
-        <p className="font-bold my-3">{newblog[0]?.dec1}</p>
+        <p className="font-bold my-3 text-gray-500">{newblog[0]?.dec1}</p>
       </div>
       <div>
         <h1 className="lg:mx-20 lg:px-20 font-bold text-2xl">REVIEW</h1>
