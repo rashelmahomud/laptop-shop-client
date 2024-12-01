@@ -1,6 +1,6 @@
 .banner-image{
     background-image: url(../../assects/dfed.png);
-    height: 95vh;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-blend-mode: overlay;

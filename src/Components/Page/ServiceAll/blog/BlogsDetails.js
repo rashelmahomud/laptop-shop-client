@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import auth from "../../../../firebase.init";
 import ReviewShow from "./customerReview/ReviewShow";
 import Reviw from "./customerReview/Reviw";
+import PrimaryAxios from "../../../Api/Primary";
 
 const BlogsDetails = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -20,9 +21,15 @@ const BlogsDetails = () => {
   const time = today.getMinutes();
 
   useEffect(() => {
-    fetch("https://laptop-shop-sarver.onrender.com/blogs")
-      .then((res) => res.json())
-      .then((data) => setBlog(data));
+      const fetchBlogsDetails = async () => {
+        try{
+        const res = await PrimaryAxios.get('/blogs')
+        setBlog(res.data)
+        }catch(error){
+          throw error.message('blogs details error fetching')
+        }
+      }
+      fetchBlogsDetails()
   }, []);
 
   const newblog = blog.filter((s) => s._id === blogId);

@@ -1,12 +1,21 @@
 import React, { useEffect, useState } from "react";
 import Blog from "./Blog";
+import PrimaryAxios from "../../../Api/Primary";
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("https://laptop-shop-sarver.onrender.com/blogs")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
+
+    const fetchBlogs = async () => {
+      try{
+        const res = await PrimaryAxios.get('/blogs')
+      return setBlogs(res.data)
+      }catch(error){
+        throw error.message('blogs fetching error')
+      }
+    }
+
+      fetchBlogs()
   }, []);
 
   return (

@@ -16,7 +16,7 @@ const CustomerReview = ({ review }) => {
                 <div>
                     <h2 className='text-2xl font-bold'>{Name}</h2>
                     <p className='font-bold'>{Email}</p>
-                    <p>{dec}</p>
+                    <p className='text-justify'>{dec}</p>
                     <div class="rating">
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />

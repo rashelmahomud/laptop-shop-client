@@ -1,26 +1,21 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import PrimaryAxios from "../Api/Primary";
 
 const AddReview = () => {
   const { register, handleSubmit } = useForm();
 
-  const onSubmit = (data) => {
-    const url = `https://laptop-shop-sarver.onrender.com/review`;
-    fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        window.alert("successfully Review add");
-        window.location.reload();
+  const onSubmit = async (data) => {
+      try {
+        const response = await PrimaryAxios.post("/review", data);
+        window.alert("Product added successfully!");
+        console.log(response.data);
+      } catch (error) {
+        console.error("Error adding product:", error);
+        window.alert("Failed to add the product. Please try again.");
+      }
 
-        // e.target.reset();
-        console.log(data);
-      });
+
   };
   return (
     <div>

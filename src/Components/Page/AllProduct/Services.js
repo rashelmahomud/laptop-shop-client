@@ -3,6 +3,7 @@ import Service from "./Service";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
 import Loading from "../../Shared/Loading/Loading";
+import PrimaryAxios from "../../Api/Primary";
 
 const SuperService = () => {
   const [searchProduct, setSearchProduct] = useState([]);
@@ -11,9 +12,15 @@ const SuperService = () => {
   const [user, loading, error] = useAuthState(auth);
 
   useEffect(() => {
-    fetch("https://laptop-shop-sarver.onrender.com/service")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
+ const fetchAllData = async () => {
+       try{
+        const res = await PrimaryAxios.get('/service')
+        setServices(res.data)
+       }catch(error){
+        throw error.message('fetching error servicesss')
+       }
+      }
+      fetchAllData()
   }, []);
   if (loading) {
     return (
