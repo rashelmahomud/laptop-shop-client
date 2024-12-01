@@ -83,8 +83,8 @@ const BestSelling = () => {
 
                 <div className='grid sm:grid-cols-2 lg:grid-cols-3 lg:mx-24 gap-12 '>
                     {
-                        servces.map(service => <SwiperSlide>
-                            <BestSell service={service} key={service._id}></BestSell>
+                        servces.map(service => <SwiperSlide key={service._id}>
+                            <BestSell  service={service} ></BestSell>
                         </SwiperSlide>)
                     }
                 </div>

@@ -29,8 +29,8 @@ const Payment = () => {
   return (
     <div>
       <div>
-        <div class="card w-96 bg-base-300 shadow-xl justify-center">
-          <div class="card-body">
+        <div className="card w-96 bg-base-300 shadow-xl justify-center">
+          <div className="card-body">
             <h1>hello{id}</h1>
             <h3>
               Hey.. :{" "}
@@ -38,13 +38,13 @@ const Payment = () => {
                 {payBill.orderName}
               </span>
             </h3>
-            <h2 class="card-title">{payBill.userEmail}</h2>
-            <h2 class="card-title">Contact : {payBill.number}</h2>
+            <h2 className="card-title">{payBill.userEmail}</h2>
+            <h2 className="card-title">Contact : {payBill.number}</h2>
             <p>Total price: ${payBill.cost}</p>
           </div>
         </div>
-        <div class="card w-96 bg-base-300 shadow-xl mt-5">
-          <div class="card-body">
+        <div className="card w-96 bg-base-300 shadow-xl mt-5">
+          <div className="card-body">
             <Elements stripe={stripePromise}>
               <CheckoutForm payBill={payBill} isLoading={isLoading} />
             </Elements>

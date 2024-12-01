@@ -46,17 +46,17 @@ const OrderModal = ({ orders, setOrders }) => {
 
   return (
     <div>
-      <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-      <div class="modal">
-        <div class="modal-box relative">
+      <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+      <div className="modal">
+        <div className="modal-box relative">
           <label
             for="my-modal-3"
-            class="btn btn-sm btn-circle absolute right-2 top-2"
+            className="btn btn-sm btn-circle absolute right-2 top-2"
           >
             ✕
           </label>
-          <h3 class="text-lg font-bold text-secondary">Choos This: {name}</h3>
-          <p class="py-4 text-primary">{sublierName}</p>
+          <h3 className="text-lg font-bold text-secondary">Choos This: {name}</h3>
+          <p className="py-4 text-primary">{sublierName}</p>
 
           <form onSubmit={handelBooking} className="grid justify-items-center">
             <input
@@ -64,35 +64,35 @@ const OrderModal = ({ orders, setOrders }) => {
               name="name"
               disabled
               value={name}
-              class="input input-bordered w-full max-w-xs m-3"
+              className="input input-bordered w-full max-w-xs m-3"
             />
             <input
               type="text"
               value={cost}
-              class="input input-bordered w-full max-w-xs m-3"
+              className="input input-bordered w-full max-w-xs m-3"
             />
             <input
               type="text"
               value={Quantity}
-              class="input input-bordered w-full max-w-xs m-3"
+              className="input input-bordered w-full max-w-xs m-3"
             />
             <input
               type="email"
               name="email"
               value={user?.email}
               placeholder="Email"
-              class="input input-bordered w-full max-w-xs m-3"
+              className="input input-bordered w-full max-w-xs m-3"
             />
             <input
               type="Number"
               name="number"
               placeholder="phone"
-              class="input input-bordered w-full max-w-xs m-3"
+              className="input input-bordered w-full max-w-xs m-3"
             />
             <input
               type="submit"
               value="submit"
-              class="input input-bordered w-full max-w-xs text-center btn btn-primary m-3"
+              className="input input-bordered w-full max-w-xs text-center btn btn-primary m-3"
             />
           </form>
         </div>

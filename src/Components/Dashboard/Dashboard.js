@@ -9,9 +9,9 @@ const Dashboard = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
     return (
-        <div class="drawer drawer-mobile px-5">
-            <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
+        <div className="drawer drawer-mobile px-5">
+            <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
                 <div className='flex'>
                     <h2 className='text-5xl font-bold text-secondary'>Dashboard</h2>
                     <div className='navbar-end'>
@@ -25,9 +25,9 @@ const Dashboard = () => {
 
 
             </div>
-            <div class="drawer-side">
-                <label for="my-drawer-2" class="drawer-overlay"></label>
-                <ul class="menu p-4 overflow-y-auto w-80 bg-base-200 text-base-content">
+            <div className="drawer-side">
+                <label for="my-drawer-2" className="drawer-overlay"></label>
+                <ul className="menu p-4 overflow-y-auto w-80 bg-base-200 text-base-content">
                     {/* <!-- Sidebar content here --> */}
                     <li><Link to='/dashboard'>My Order</Link></li>
                     <li><Link to='/dashboard/review'>Add Review</Link></li>

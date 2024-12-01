@@ -42,7 +42,7 @@ const Details = () => {
 
   return (
     <div className="border lg:px-40 lg:py-5">
-      <div class="card bg-base-200 shadow-xl justify-content-center lg:p-5">
+      <div className="card bg-base-200 shadow-xl justify-content-center lg:p-5">
         <figure>
           <img
             className="rounded"
@@ -51,17 +51,17 @@ const Details = () => {
             alt="Shoes"
           />
         </figure>
-        <div class="card-body text-center">
+        <div className="card-body text-center">
           <h2 className="text-2xl font-bold">{service.name}</h2>
           <p className="text-gray-500">{service.description}</p>
           <p className="font-bold">{service.cost}</p>
           <p className="font-bold">Total Quentity {service.TotalQuentity}</p>
           <p className="font-bold">Quentity {service.Quantity}</p>
-          <div class="card-actions justify-center">
+          <div className="card-actions justify-center">
             <label
               onClick={() => setOrders(service)}
               for="my-modal-3"
-              class="btn modal-button btn btn-outline btn-primary"
+              className="btn modal-button btn btn-outline btn-primary"
             >
               Order Now
             </label>
@@ -73,7 +73,7 @@ const Details = () => {
             <input
               type="number"
               placeholder="Quentity ADD"
-              class="input w-full max-w-xs bg-base-300"
+              className="input w-full max-w-xs bg-base-300"
               name="quantity"
             />
             <input

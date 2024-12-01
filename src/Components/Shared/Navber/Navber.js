@@ -37,9 +37,9 @@ const Navber = ({ handleThemeChange, theme }) => {
           className="rounded-full lg:mx-2 font-bold pr-2"
         >
           {theme ? (
-            <i class="fa-solid fa-sun"></i>
+            <i className="fa-solid fa-sun"></i>
           ) : (
-            <i class="fa-solid fa-moon"></i>
+            <i className="fa-solid fa-moon"></i>
           )}
         </button>
       </li>
@@ -91,9 +91,9 @@ const Navber = ({ handleThemeChange, theme }) => {
               {navbermenu}
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
-            LAPTOP PARTS
-          </Link>
+          <Link to="/" className="font-bold normal-case text-2xl">
+          <span className="text-orange-500">Laptop</span>Parts
+        </Link>
         </div>
         <div className="navbar-end hidden lg:flex font-bold">
           <ul className="menu menu-horizontal p-0">{navbermenu}</ul>
@@ -173,7 +173,7 @@ const Navber = ({ handleThemeChange, theme }) => {
           <div className="dropdown dropdown-end">
             <label tabindex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src={user.photoURL} />
+                <img src={user.photoURL} alt="img" />
               </div>
             </label>
             <ul

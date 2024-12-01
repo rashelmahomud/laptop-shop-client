@@ -6,21 +6,21 @@ const Fotfolio = () => {
         <div>
             <div>
 
-                <div class="hero min-h-screen">
-                    <div class="hero-content flex-col lg:flex-row-reverse">
+                <div className="hero min-h-screen">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
 
-                        <div class="card flex-shrink-0 shadow-2xl bg-base-100">
-                            <div class="card-body">
-                                <div class="form-control">
-                                    <label class="label">
+                        <div className="card flex-shrink-0 shadow-2xl bg-base-100">
+                            <div className="card-body">
+                                <div className="form-control">
+                                    <label className="label">
                                         <h2 className='font-bold text-2xl text-center'>MY INFORMATION</h2>
                                     </label>
 
                                 </div>
                                 <div>
                                     <div className=' p-20'>
-                                        <div class="avatar">
-                                            <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                        <div className="avatar">
+                                            <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                                                 <img src={myimage} />
                                             </div>
                                         </div>

@@ -61,13 +61,13 @@ const BlogsDetails = () => {
 
           <div className="flex gap-5 p-2 mx-auto text-2xl">
             <a href="https://www.linkedin.com/in/rashelmahomud/">
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </a>
             <a href="https://web.facebook.com/rashelmahomud.raj">
-              <i class="fa-brands fa-square-facebook"></i>
+              <i className="fa-brands fa-square-facebook"></i>
             </a>
             <Link to="/">
-              <i class="fa-solid fa-link"></i>
+              <i className="fa-solid fa-link"></i>
             </Link>
           </div>
         </div>

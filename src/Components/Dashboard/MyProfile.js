@@ -35,24 +35,24 @@ const MyProfile = ({ order }) => {
 
   return (
     <div>
-      <div class="hero">
-        <div class="hero-content flex-col lg:flex-row-reverse">
-          <div class="card flex-shrink-0 lg:w-full md:w-full w-80  shadow-2xl bg-base-200">
-            <div class="card-body">
-              <div class="form-control">
-                <label class="label">
+      <div className="hero">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="card flex-shrink-0 lg:w-full md:w-full w-80  shadow-2xl bg-base-200">
+            <div className="card-body">
+              <div className="form-control">
+                <label className="label">
                   <h2 className="font-bold text-2xl">Profile</h2>
                 </label>
               </div>
               {profiles.slice(-1).map((profile) => (
                 <div>
                   <div>
-                    <div class="avatar">
-                      <div class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 z-20">
+                    <div className="avatar">
+                      <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2 z-20">
                         <img src={user.photoURL} alt="img" />
                       </div>
                       <label htmlFor="my-modal-5" className="ml-5 mt-10">
-                        <i class="fa-solid fa-pen-to-square"></i>
+                        <i className="fa-solid fa-pen-to-square"></i>
                       </label>
                     </div>
                     <h1 className="text-2xl font-bold ">
@@ -85,9 +85,9 @@ const MyProfile = ({ order }) => {
       <input type="checkbox" id="my-modal-5" className="modal-toggle" />
       <div className="modal">
         <div className="modal-box w-6/12 max-w-5xl">
-          <div class="card  shadow-2xl">
-            <div class="card-body">
-              <div class="form-control">
+          <div className="card  shadow-2xl">
+            <div className="card-body">
+              <div className="form-control">
                 <div className="rounded lg:m-20 p-5">
                   <h3 className=" font-bold">You Can Add Your Profile Here!</h3>
                   <form

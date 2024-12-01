@@ -8,7 +8,7 @@ const Show = ({ d }) => {
             <div className='flex gap-5'>
                 <p className="flex h-screen justify-center items-center w-8 h-8 bg-gray-100 rounded-full">
                     {
-                        user ? <i class="fa-solid fa-user"></i> : <i class="fa-solid fa-user"></i>
+                        user ? <i className="fa-solid fa-user"></i> : <i className="fa-solid fa-user"></i>
                     }
                 </p>
 
@@ -16,12 +16,12 @@ const Show = ({ d }) => {
             </div>
             <p>{d.dec}</p>
             <p>{d.description}</p>
-            <div class="rating">
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <div className="rating">
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" checked />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
             </div>
         </div>
     );

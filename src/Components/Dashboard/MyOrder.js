@@ -62,8 +62,8 @@ const MyOrder = () => {
     <div>
       <h2 className="text-2xl font-bold my-10">My Orders {myOrder.length}</h2>
 
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th></th>
@@ -86,19 +86,19 @@ const MyOrder = () => {
                 <td>
                   {order.cost && !order.paid && (
                     <Link to={`/dashboard/payment/${order._id}`}>
-                      <button class="btn btn-xs font-bold bg-green-600">
+                      <button className="btn btn-xs font-bold bg-green-600">
                         Pay
                       </button>
                     </Link>
                   )}
                   {order.cost && order.paid && (
-                    <span class="btn btn-xs font-bold bg-gray-600">paid</span>
+                    <span className="btn btn-xs font-bold bg-gray-600">paid</span>
                   )}
                 </td>
                 <td>
                   <button
                     onClick={() => handelDeleteOrder(order._id)}
-                    class="btn btn-xs font-bold bg-red-600"
+                    className="btn btn-xs font-bold bg-red-600"
                   >
                     Delete
                   </button>

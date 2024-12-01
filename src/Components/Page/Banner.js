@@ -8,7 +8,7 @@ const Banner = () => {
     <div className="banner-image hero min-h-screen hellotop mx-auto">
       <div className="hero-content flex flex-col lg:flex-row-reverse">
         <div>
-          {" "}
+         
           <img data-aos="flip-right" data-aos-duration="2000" src={img} />
         </div>
         <div className="mr-20 mt-5">
@@ -26,6 +26,7 @@ const Banner = () => {
             Hello Dear Customers!
           </h1>
           <p className="py-6 font-serif">
+         
             Laptoop parts is a simply dummy text of the printing and typesetting
             industry. <br /> Our Shops is a best and Unice all Products..
           </p>
