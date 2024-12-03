@@ -2,15 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
+import PrimaryAxios from "../Api/Primary";
 
 const MyProfile = ({ order }) => {
   const [user] = useAuthState(auth);
   const [profiles, setProfiles] = useState([]);
   const { register, handleSubmit } = useForm();
   useEffect(() => {
-    fetch("https://laptop-shop-sarver.onrender.com/profile")
-      .then((res) => res.json())
-      .then((data) => setProfiles(data));
+    const profileFetching =async () => {
+      const res = await PrimaryAxios.get('/profile')
+      setProfiles(res.data)
+    }
+    profileFetching()
   }, []);
 
   const onSubmit = (data) => {
