@@ -10,13 +10,13 @@ import Services from "./ServiceAll/Services";
 const Home = () => {
   return (
     <div>
-      <Banner></Banner>
-      <Services></Services>
-      <Reviews></Reviews>
-      <CustomerReviews></CustomerReviews>
-      <BestSelling></BestSelling>
-      <ContactUs></ContactUs>
-      <Footer></Footer>
+      <Banner />
+      <Services />
+      <Reviews />
+      <CustomerReviews />
+      <BestSelling />
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

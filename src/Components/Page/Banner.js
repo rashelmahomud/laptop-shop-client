@@ -30,7 +30,7 @@ const Banner = () => {
             Laptoop parts is a simply dummy text of the printing and typesetting
             industry. <br /> Our Shops is a best and Unice all Products..
           </p>
-          <button className="btn btn-primary font-serif">Get Started</button>
+          <button className="btn btn-primary font-serif"><a href="/service">Get Started</a></button>
         </div>
       </div>
     </div>
