@@ -4,7 +4,7 @@ const useServiceDetails = (servicesId) => {
   const [service, setService] = useState({});
 
   useEffect(() => {
-    const url = `https://laptop-shop-sarver.vercel.app/service/${servicesId}`;
+    const url = `https://laptop-parts-sarver.vercel.app/service/${servicesId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setService(data));

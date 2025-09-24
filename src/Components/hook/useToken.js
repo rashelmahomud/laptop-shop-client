@@ -6,7 +6,7 @@ const useToken = (user) => {
     const currentUser = { email: email };
 
     if (email) {
-      fetch(`https://laptop-shop-sarver.vercel.app/user/${email}`, {
+      fetch(`https://laptop-parts-sarver.vercel.app/user/${email}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",
