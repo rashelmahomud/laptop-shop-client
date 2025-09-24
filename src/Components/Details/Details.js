@@ -23,7 +23,7 @@ const Details = () => {
       return;
     }
 
-    fetch(`https://laptop-shop-sarver.onrender.com/service/${servicesId}`, {
+    fetch(`https://laptop-shop-sarver.vercel.app/service/${servicesId}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -23,7 +23,7 @@ const OrderModal = ({ orders, setOrders }) => {
       number: event.target.number.value,
     };
 
-    fetch("https://laptop-shop-sarver.onrender.com/order", {
+    fetch("https://laptop-shop-sarver.vercel.app/order", {
       method: "POST",
       headers: {
         "content-type": "application/json",
