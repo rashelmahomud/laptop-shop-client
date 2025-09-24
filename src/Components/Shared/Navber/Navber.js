@@ -4,7 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../firebase.init";
 
-const Navber = ({ handleThemeChange, theme }) => {
+const Navber = ({ handleThemeChange, dark }) => {
   const [user, loading, error] = useAuthState(auth);
 
   const logout = () => {
@@ -36,7 +36,7 @@ const Navber = ({ handleThemeChange, theme }) => {
           onClick={handleThemeChange}
           className="rounded-full lg:mx-2 font-bold pr-2"
         >
-          {theme ? (
+          {dark ? (
             <i className="fa-solid fa-sun"></i>
           ) : (
             <i className="fa-solid fa-moon"></i>

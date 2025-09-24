@@ -5,7 +5,6 @@ const useServiceDetails = (servicesId) => {
 
   useEffect(() => {
     const url = `https://laptop-shop-sarver.onrender.com/service/${servicesId}`;
-    console.log(url);
     fetch(url)
       .then((res) => res.json())
       .then((data) => setService(data));

@@ -15,7 +15,6 @@ const Login = () => {
         signInWithEmailAndPassword,
         user,
         loading,
-        error,
     ] = useSignInWithEmailAndPassword(auth);
 
     const [token] = useToken(user || gUser);
@@ -46,7 +45,6 @@ const Login = () => {
 
 
     const onSubmit = data => {
-        console.log(data)
         signInWithEmailAndPassword(data.email, data.password);
         // navigate('/home');
     };
