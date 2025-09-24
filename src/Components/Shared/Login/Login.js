@@ -24,9 +24,10 @@ const Login = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    // if (user || gUser) {
-    //     navigate(from, { replace: true });
-    // }
+    if (user || gUser) {
+        navigate('/');
+    }
+
     useEffect( () => {
         if (token) {
             navigate(from, { replace: true });
@@ -46,7 +47,7 @@ const Login = () => {
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
-        // navigate('/home');
+        // navigate('/');
     };
 
     return (
