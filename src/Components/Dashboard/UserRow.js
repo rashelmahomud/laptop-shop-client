@@ -5,7 +5,7 @@ const UserRow = ({ user, index, refetch }) => {
   const { email, role } = user;
 
   const makeAdmin = () => {
-    fetch(`https://laptop-shop-sarver.onrender.com/user/admin/${email}`, {
+    fetch(`https://laptop-parts-sarver.vercel.app/user/admin/${email}`, {
       method: "PUT",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

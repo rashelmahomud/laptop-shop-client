@@ -14,7 +14,7 @@ const CheckoutForm = ({ payBill }) => {
 
   useEffect(() => {
     if (cost) {
-      fetch("https://laptop-shop-sarver.onrender.com/create-payment-intent", {
+      fetch("https://laptop-parts-sarver.vercel.app/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

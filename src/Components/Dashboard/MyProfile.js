@@ -18,7 +18,7 @@ const MyProfile = ({ order }) => {
 
   const onSubmit = (data) => {
     // console.log("hello", data);
-    const url = `https://laptop-shop-sarver.onrender.com/profile`;
+    const url = `https://laptop-parts-sarver.vercel.app/profile`;
     fetch(url, {
       method: "POST",
       headers: {

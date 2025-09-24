@@ -13,7 +13,7 @@ const MyOrder = () => {
     const proceed = window.confirm("Are You Sure For Delete Order?");
     if (proceed) {
       // console.log("hello",id);
-      fetch(`https://laptop-shop-sarver.onrender.com/order/${id}`, {
+      fetch(`https://laptop-parts-sarver.vercel.app/order/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -33,7 +33,7 @@ const MyOrder = () => {
   useEffect(() => {
     if (user) {
       fetch(
-        `https://laptop-shop-sarver.onrender.com/order?userEmail=${user.email}`,
+        `https://laptop-parts-sarver.vercel.app/order?userEmail=${user.email}`,
         {
           method: "GET",
           headers: {

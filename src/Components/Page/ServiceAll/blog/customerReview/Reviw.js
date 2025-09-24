@@ -5,7 +5,7 @@ const Reviw = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
-    const url = `https://laptop-shop-sarver.onrender.com/blogReview`;
+    const url = `https://laptop-parts-sarver.vercel.app/blogReview`;
     fetch(url, {
       method: "POST",
       headers: {
