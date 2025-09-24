@@ -97,7 +97,7 @@ function App() {
             path="/dashboard/users"
             element={
               <RequirAdmin>
-                <Users></Users>
+                <Users />
               </RequirAdmin>
             }
           ></Route>
@@ -105,7 +105,7 @@ function App() {
             path="/dashboard/addproduct"
             element={
               <RequirAdmin>
-                <AddProduct></AddProduct>
+                <AddProduct />
               </RequirAdmin>
             }
           ></Route>

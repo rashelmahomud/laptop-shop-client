@@ -8,8 +8,11 @@ const Blogs = () => {
 
     const fetchBlogs = async () => {
       try{
+
         const res = await PrimaryAxios.get('/blogs')
+      
       return setBlogs(res.data)
+      
       }catch(error){
         throw error.message('blogs fetching error')
       }
